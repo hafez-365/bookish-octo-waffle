@@ -1,7 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "envMode": "strict",
   "globalEnv": [
     "NODE_ENV",
     "NEXT_PUBLIC_POSTHOG_API_KEY"
@@ -9,11 +8,9 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["NEXT_PUBLIC_APP_URL"],
       "outputs": ["dist/**", ".next/**"]
     },
     "preview": {
-      "env": ["NEXT_PUBLIC_APP_URL"],
       "outputs": [".next/**"]
     },
     "start": {
