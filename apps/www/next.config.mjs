@@ -1,0 +1,64 @@
+import { createMDX } from "fumadocs-mdx/next"
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "standalone",
+  // Hide Next.js dev indicator when capturing screenshots (run dev with CAPTURE_SCREENSHOTS=1)
+  ...(process.env.CAPTURE_SCREENSHOTS === "1" ? { devIndicators: false } : {}),
+  outputFileTracingIncludes: {
+    "/*": ["./registry/**/*", "./content/**/*"],
+  },
+  reactStrictMode: true,
+  experimental: {
+    inlineCss: true,
+  },
+  images: {
+    domains: ["localhost", "res.cloudinary.com", "avatar.vercel.sh", "pbs.twimg.com","pub-b3533f2e1c954842824758490b95c9d5.r2.dev","avatars.githubusercontent.com"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/discord",
+        destination: "https://discord.gg/X4BBMBjHNf",
+        permanent: true,
+      },
+      {
+        source: "/components",
+        destination: "/docs/components",
+        permanent: true,
+      },
+      {
+        source: "/showcase/:path*.mdx",
+        destination: "/showcase/:path*.md",
+        permanent: true,
+      },
+      {
+        source: "/blog/:path*.mdx",
+        destination: "/blog/:path*.md",
+        permanent: true,
+      },
+      {
+        source: "/docs/:path*.mdx",
+        destination: "/docs/:path*.md",
+        permanent: true,
+      },
+      {
+        source: "/r/:path([^.]*)",
+        destination: "/r/:path.json",
+        permanent: true,
+      },
+    ]
+  },
+  rewrites() {
+    return [
+      {
+        source: "/docs/:path*.md",
+        destination: "/llm/:path*",
+      },
+    ]
+  },
+}
+
+const withMDX = createMDX({})
+
+export default withMDX(nextConfig)

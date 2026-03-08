@@ -1,0 +1,51 @@
+---
+title: Gradual Spacing Text
+date: 2025-01-27
+description: Animated text component that reveals characters one by one with gradual spacing effect.
+author: karthikmudunuri
+published: true
+---
+
+<ComponentPreview name="gradual-spacing-text-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    ```bash 
+    npx shadcn@latest add @eldoraui/gradual-spacing-text
+    ```
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the following code into your project.</Step>
+
+      `components/eldoraui/gradual-spacing-text.tsx`
+
+      <ComponentSource name="gradual-spacing-text" />
+      <Step>Update the import paths to match your project setup.</Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { GradualSpacingText } from "@/components/eldoraui/gradual-spacing-text"
+```
+
+```tsx showLineNumbers
+<GradualSpacingText text="Welcome to EldoraUI" className="text-blue-600" />
+```
+
+## Props
+
+| Prop        | Type     | Default | Description                                    |
+| ----------- | -------- | ------- | ---------------------------------------------- |
+| `text`      | `string` | `""`    | The text content to display                    |
+| `className` | `string` | `""`    | Additional CSS classes to apply to the element |

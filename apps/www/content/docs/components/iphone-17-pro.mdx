@@ -1,0 +1,67 @@
+---
+title: iPhone 17 Pro
+date: 2025-01-27
+description: iPhone 17 Pro device mockup with rounded corners, notch, and customizable screen image display.
+author: karthikmudunuri
+published: true
+---
+
+<ComponentPreview name="iphone-17-pro-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @eldoraui/iphone-17-pro
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/eldoraui/iphone-17-pro.tsx`
+
+<ComponentSource name="iphone-17-pro" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { Iphone17Pro } from "@/components/eldoraui/iphone-17-pro"
+```
+
+```tsx showLineNumbers
+<Iphone17Pro
+  src="https://res.cloudinary.com/eldoraui/image/upload/v1759051266/469059-640_kwga4s.jpg"
+  width={200}
+  height={400}
+  className="h-80 w-full"
+/>
+```
+
+## Props
+
+| Prop        | Type     | Default | Description                                      |
+| ----------- | -------- | ------- | ------------------------------------------------ |
+| `src`       | `string` | `-`     | The source of the image to display on the screen |
+| `width`     | `number` | `200`   | The width of the iPhone 17 Pro mockup            |
+| `height`    | `number` | `400`   | The height of the iPhone 17 Pro mockup           |
+| `className` | `string` | `-`     | Additional CSS classes for styling               |

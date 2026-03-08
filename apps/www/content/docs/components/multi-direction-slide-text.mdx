@@ -1,0 +1,56 @@
+---
+title: Multi Direction Slide Text
+date: 2025-01-27
+description: Animated text component that slides text from different directions with smooth motion effects.
+author: karthikmudunuri
+published: true
+---
+
+<ComponentPreview name="multi-direction-slide-text-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    ```bash 
+    npx shadcn@latest add @eldoraui/multi-direction-slide-text
+    ```
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the following code into your project.</Step>
+
+      `components/eldoraui/multi-direction-slide-text.tsx`
+
+      <ComponentSource name="multi-direction-slide-text" />
+      <Step>Update the import paths to match your project setup.</Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { MultiDirectionSlideText } from "@/components/eldoraui/multi-direction-slide-text"
+```
+
+```tsx showLineNumbers
+<MultiDirectionSlideText
+  textLeft="Multidirectional"
+  textRight="Slide"
+  className="text-blue-600"
+/>
+```
+
+## Props
+
+| Prop        | Type     | Default | Description                                    |
+| ----------- | -------- | ------- | ---------------------------------------------- |
+| `textLeft`  | `string` | `""`    | The text content that slides in from the left  |
+| `textRight` | `string` | `""`    | The text content that slides in from the right |
+| `className` | `string` | `""`    | Additional CSS classes to apply to the element |
