@@ -184,24 +184,24 @@
 
   /* Added Keyframes */
   @keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes spin-fast {
-  from {
-    transform: rotate(0deg);
+  @keyframes spin-fast {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes aurora {
+  @keyframes aurora {
     0% {
       background-position: 0% 50%;
       transform: rotate(-5deg) scale(0.9);
@@ -260,7 +260,7 @@
       background-position: 200%;
     }
   }
-  
+
   @keyframes frameworkline-animation-path {
     0% {
       offset-distance: 0%;
@@ -272,7 +272,7 @@
       offset-distance: 100%;
     }
   }
-  
+
   @keyframes line-shadow {
     0% {
       background-position: 0 0;
@@ -345,35 +345,35 @@
   }
 }
 
-@keyframes orbit {
-  0% {
-    transform: rotate(calc(var(--angle) * 1deg))
-      translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg))
+        translateY(calc(var(--radius) * 1px))
+        rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
   }
-  100% {
-    transform: rotate(calc(var(--angle) * 1deg + 360deg))
-      translateY(calc(var(--radius) * 1px))
-      rotate(calc((var(--angle) * -1deg) - 360deg));
-  }
-}
 
-@keyframes move-x {
-  0% {
-    transform: translateX(var(--move-x-from));
+  @keyframes move-x {
+    0% {
+      transform: translateX(var(--move-x-from));
+    }
+    100% {
+      transform: translateX(var(--move-x-to));
+    }
   }
-  100% {
-    transform: translateX(var(--move-x-to));
-  }
-}
 
-@keyframes orbit-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes orbit-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @layer base {
   :root {
